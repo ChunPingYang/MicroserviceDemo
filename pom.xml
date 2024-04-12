@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>cloud-provider-payment</module>
+        <module>cloud-consumer-order80</module>
     </modules>
 
     <properties>
@@ -92,11 +93,13 @@
     </dependencyManagement>
 
     <build>
+        <finalName>Microservice2024</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <addResources>true</addResources>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>

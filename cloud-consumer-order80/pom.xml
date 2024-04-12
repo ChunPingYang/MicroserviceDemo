@@ -6,9 +6,10 @@
         <artifactId>MicroserviceDemo</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>cloud-provider-payment</artifactId>
-    <name>Archetype - cloud-provider-payment8001</name>
+    <artifactId>cloud-consumer-order80</artifactId>
+    <name>Archetype - cloud-consumer-order80</name>
     <url>http://maven.apache.org</url>
+
 
     <dependencies>
         <!-- 包含了sleuth zipkin 数据链路追踪-->
@@ -30,30 +31,16 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.mybatis.spring.boot</groupId>-->
-<!--            <artifactId>mybatis-spring-boot-starter</artifactId>-->
-<!--        </dependency>-->
         <!--eureka client-->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.cloud</groupId>-->
 <!--            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>-->
 <!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba</groupId>-->
-<!--            <artifactId>druid-spring-boot-starter</artifactId>-->
-<!--            &lt;!&ndash;如果没写版本,从父层面找,找到了就直接用,全局统一&ndash;&gt;-->
-<!--        </dependency>-->
-        <!--mysql-connector-java-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>
         <!--spring-data-jpa-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-jpa</artifactId>-->
+<!--        </dependency>-->
         <!--热部署-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -70,6 +57,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
         </dependency>
     </dependencies>
 </project>
