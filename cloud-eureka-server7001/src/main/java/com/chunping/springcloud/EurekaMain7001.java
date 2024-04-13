@@ -3,16 +3,13 @@ package com.chunping.springcloud;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
-//https://www.cnblogs.com/javastack/p/12016212.html
-//@EnableAutoConfiguration
-//(exclude = {DataSourceAutoConfiguration.class, MailSenderAutoConfiguration.class})
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-@EnableDiscoveryClient
-public class OrderMain80 {
+@EnableEurekaServer
+public class EurekaMain7001 {
 
     public static void main(String[] args){
-        SpringApplication.run(OrderMain80.class, args);
+        SpringApplication.run(EurekaMain7001.class,args);
     }
 }
