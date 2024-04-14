@@ -18,6 +18,10 @@
 <!--            <artifactId>spring-cloud-starter-zipkin</artifactId>-->
 <!--        </dependency>-->
         <dependency><!-- 引用自己定义的api通用包，可以使用Payment支付Entity -->
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+        <dependency><!-- 引用自己定义的api通用包，可以使用Payment支付Entity -->
             <groupId>com.chunping.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>${project.version}</version>
