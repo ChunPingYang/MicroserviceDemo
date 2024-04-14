@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
 @Configuration
-//@LoadBalancerClient(value = "CLOUD-PAYMENT-SERVICE", configuration = CustomLoadBalancerConfiguration.class)
+@LoadBalancerClient(value = "CLOUD-PAYMENT-SERVICE", configuration = CustomLoadBalancerConfiguration.class)
 public class ApplicationContextConfig {
 
     @Bean

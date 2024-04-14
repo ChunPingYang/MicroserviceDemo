@@ -13,6 +13,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @Slf4j
@@ -53,6 +54,11 @@ public class PaymentController {
         }
     }
 
+    @GetMapping(value = "/payment/lb")
+    public String getPaymentLB() {
+        return serverPort;
+    }
+
     @GetMapping(value = "/payment/discovery")
     public Object discovery() {
         List<String> services = discoveryClient.getServices();
@@ -68,5 +74,17 @@ public class PaymentController {
         }
 
         return  this.discoveryClient;
+    }
+
+    @GetMapping(value = "/payment/feign/timeout")
+    public String paymentFeignTimeout(){
+        try{
+            TimeUnit.SECONDS.sleep(3);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            return serverPort;
+        }
     }
 }
