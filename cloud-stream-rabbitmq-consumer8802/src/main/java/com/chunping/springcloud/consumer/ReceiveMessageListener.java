@@ -23,6 +23,7 @@ public class ReceiveMessageListener {
 //                log.info("demoChannel:{}", s);
 //            }
 //        };
+
         return msg -> log.info("demoChannel接到消息：{} ,serverPort: {}", msg, serverPort);
     }
 }
